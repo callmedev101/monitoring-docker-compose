@@ -64,10 +64,12 @@ services:
   #        constraints:
   #          - node.hostname == ${HOSTNAME}
     volumes:
+      - alertmanager_data:/alertmanager
       - ./alertmanager/:/etc/alertmanager/
     command:
       - '--config.file=/etc/alertmanager/config.yml'
       - '--storage.path=/alertmanager'
+      - '--web.external-url=http://10.22.66.116:9093'
 
   cadvisor:
     image: google/cadvisor
@@ -125,4 +127,6 @@ volumes:
   prometheus_data:
     external: true
   grafana_data:
+    external: true
+  alertmanager_data:
     external: true
