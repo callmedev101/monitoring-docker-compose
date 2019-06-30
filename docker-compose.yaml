@@ -69,7 +69,7 @@ services:
     command:
       - '--config.file=/etc/alertmanager/config.yml'
       - '--storage.path=/alertmanager'
-      - '--web.external-url=http://10.22.66.116:9093'
+  #    - '--web.external-url=http://10.22.66.116:9093'
 
   cadvisor:
     image: google/cadvisor
