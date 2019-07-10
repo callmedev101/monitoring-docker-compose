@@ -67,7 +67,7 @@ services:
       - alertmanager_data:/alertmanager
       - ./alertmanager/:/etc/alertmanager/
     command:
-      - '--config.file=/etc/alertmanager/config.yml'
+      - '--config.file=/etc/alertmanager/config.yaml'
       - '--storage.path=/alertmanager'
   #    - '--web.external-url=http://10.22.66.116:9093'
 
